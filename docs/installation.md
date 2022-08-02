@@ -5,4 +5,4 @@ sidebar_position: 2
 
 # Installation
 
-## Deploying Parseable for Real world scenarios
+## Deploying Parseable for Real world scenarios.
