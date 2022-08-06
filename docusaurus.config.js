@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "Parseable",
   tagline: "Dinosaurs are cool",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
@@ -49,6 +49,7 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        
       }),
     ],
   ],
@@ -65,8 +66,7 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
+            to: "/docs",
             position: "left",
             label: "Docs",
           },
@@ -150,4 +150,17 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = {
+  ...config,
+  plugins: [
+    // ...
+    "docusaurus-tailwindcss",
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-L6EYV9EXDM",
+        anonymizeIP: true,
+      },
+    ],
+  ],
+};
